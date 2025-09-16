@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+
 import OnThisDay from '@/components/OnThisDay';
 import PlayCta from '@/components/PlayCta';
 import FeaturedCard from '@/components/FeaturedCard';
@@ -16,6 +17,7 @@ export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col bg-slate-50">
       <Header />
+      <LiveScoresTicker />
       <main className="flex-1">
         <section className="mx-auto w-full max-w-6xl px-4 py-16 md:px-6">
           <div className="grid gap-10 md:grid-cols-12 md:items-center">
@@ -23,6 +25,7 @@ export default function HomePage() {
               <p className="text-sm font-semibold uppercase tracking-widest text-emerald-600">{today}</p>
               <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
                 Daily sports trivia and history that plays to win.
+                Daily sports trivia, live scores, and history that plays to win.
               </h1>
               <p className="max-w-2xl text-lg text-slate-600">
                 Answer the public question every morning, then log in to unlock the member challenge, track your streak, and climb

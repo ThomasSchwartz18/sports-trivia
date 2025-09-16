@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { mockOtd, type OnThisDayItem } from '@/lib/mocks';
 import { nowInET } from '@/lib/time';
 
+import { mockOtd } from '@/lib/mocks';
+
 export const runtime = 'edge';
 export const revalidate = 21600;
 
@@ -228,4 +230,31 @@ export async function GET() {
       }
     }
   );
+
+export async function GET() {
+  try {
+    // TODO: Replace mock with Wikimedia or cached source.
+    const data = mockOtd;
+
+    return NextResponse.json(
+      { ok: true, data },
+      {
+        status: 200,
+        headers: {
+          'Cache-Control': CACHE_CONTROL
+        }
+      }
+    );
+  } catch (error) {
+    console.error('otd error', error);
+    return NextResponse.json(
+      { ok: false, error: 'Failed to load history' },
+      {
+        status: 500,
+        headers: {
+          'Cache-Control': CACHE_CONTROL
+        }
+      }
+    );
+  }
 }
