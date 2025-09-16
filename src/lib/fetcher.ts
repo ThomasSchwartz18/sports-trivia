@@ -6,7 +6,9 @@ const REVALIDATE_MAP: Record<string, number> = {
 export async function getJSON<T>(path: string): Promise<T> {
   if (typeof window === 'undefined') {
     const revalidate = REVALIDATE_MAP[path] ?? 60;
-    const res = await fetch(path, {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
+    const requestUrl = /^https?:\/\//i.test(path) ? path : new URL(path, baseUrl).toString();
+    const res = await fetch(requestUrl, {
       next: {
         revalidate
       }
