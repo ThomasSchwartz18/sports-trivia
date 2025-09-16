@@ -37,6 +37,18 @@ export default async function OnThisDay() {
             On This Day in Sports
           </h2>
           <p className="text-sm text-slate-500">{todayLabel} in sports history</p>
+          <p className="text-xs text-slate-400">
+            Data from{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Wikipedia:On_this_day"
+              className="text-slate-500 underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Wikipedia On This Day feed
+            </a>
+            .
+          </p>
         </div>
       </div>
       {error ? (

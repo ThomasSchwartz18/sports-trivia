@@ -1,5 +1,5 @@
 import Header from '@/components/Header';
-import LiveScoresTicker from '@/components/LiveScoresTicker';
+
 import OnThisDay from '@/components/OnThisDay';
 import PlayCta from '@/components/PlayCta';
 import FeaturedCard from '@/components/FeaturedCard';
@@ -24,6 +24,7 @@ export default function HomePage() {
             <div className="space-y-6 md:col-span-7">
               <p className="text-sm font-semibold uppercase tracking-widest text-emerald-600">{today}</p>
               <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+                Daily sports trivia and history that plays to win.
                 Daily sports trivia, live scores, and history that plays to win.
               </h1>
               <p className="max-w-2xl text-lg text-slate-600">

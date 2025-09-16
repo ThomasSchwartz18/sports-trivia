@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2017",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
     "lib": [
       "DOM",
       "DOM.Iterable",
@@ -20,6 +22,16 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@/components/*": ["./src/components/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/app/*": ["./src/app/*"]
+    },
+    "types": ["@types/node"],
+    "plugins": [{ "name": "next" }]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
       "@/components/*": [
         "./src/components/*"
       ],

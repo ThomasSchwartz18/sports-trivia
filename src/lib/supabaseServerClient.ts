@@ -1,3 +1,6 @@
+import { createServerClient } from '@supabase/auth-helpers-nextjs';
+import type { CookieOptions } from '@supabase/auth-helpers-nextjs';
+
 import { createServerClient, type CookieOptions } from '@supabase/auth-helpers-nextjs';
 import { cookies, type RequestCookies } from 'next/headers';
 

@@ -1,64 +1,8 @@
-export type LiveScore = {
-  league: string;
-  home: string;
-  away: string;
-  status: string;
-  minuteOrInning?: string;
-  homeScore: number;
-  awayScore: number;
-};
-
 export type OnThisDayItem = {
   year: number;
   text: string;
   url?: string;
 };
-
-export const mockScores: LiveScore[] = [
-  {
-    league: 'NBA',
-    home: 'Knicks',
-    away: 'Celtics',
-    status: 'Final',
-    homeScore: 112,
-    awayScore: 108
-  },
-  {
-    league: 'MLB',
-    home: 'Yankees',
-    away: 'Red Sox',
-    status: 'Top 7th',
-    minuteOrInning: '7th',
-    homeScore: 4,
-    awayScore: 3
-  },
-  {
-    league: 'NHL',
-    home: 'Rangers',
-    away: 'Devils',
-    status: '2nd Period',
-    minuteOrInning: '12:34',
-    homeScore: 2,
-    awayScore: 2
-  },
-  {
-    league: 'MLS',
-    home: 'NYCFC',
-    away: 'Inter Miami',
-    status: 'HT',
-    minuteOrInning: '45+2',
-    homeScore: 1,
-    awayScore: 1
-  },
-  {
-    league: 'NFL',
-    home: 'Giants',
-    away: 'Eagles',
-    status: 'Sun 1:00 PM',
-    homeScore: 0,
-    awayScore: 0
-  }
-];
 
 export const mockOtd: OnThisDayItem[] = [
   {
